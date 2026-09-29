@@ -1,22 +1,26 @@
-void main() {
-    Scanner in = new Scanner(System.in);
+import java.util.Scanner;
 
-    double cVal = 0;
-    double fVal = 0;
-    boolean done = false;
+public class CtoFConverter {
+    void main() {
+        Scanner in = new Scanner(System.in);
 
-    do {
-        IO.print("Enter the Celsius value: ");
+        double cVal = 0;
+        double fVal = 0;
+        boolean done = false;
 
-        if (in.hasNextDouble()) {
-            cVal = in.nextDouble();
-            fVal = cVal * 9.0/5 + 32;
-            done = true;
-        } else {
-            String trash = in.nextLine();
-            IO.println("Incorrect response. Expected Celsius, got \"" + trash + "\"");
-        }
-    } while (!done);
+        do {
+            IO.print("Enter the Celsius value: ");
 
-    IO.print("Your Celsius value (" + cVal + "C) is equal to " + fVal + "F");
+            if (in.hasNextDouble()) {
+                cVal = in.nextDouble();
+                fVal = cVal * 9.0/5 + 32;
+                done = true;
+            } else {
+                String trash = in.nextLine();
+                IO.println("Incorrect response. Expected Celsius, got \"" + trash + "\"");
+            }
+        } while (!done);
+
+        IO.print("Your Celsius value (" + cVal + "C) is equal to " + fVal + "F");
+    }
 }
