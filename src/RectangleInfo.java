@@ -9,6 +9,7 @@ void main() {
 
         if (in.hasNextDouble()) {
             width = in.nextDouble();
+            in.nextLine();
             done = true;
         } else {
             String trash = in.nextLine();
@@ -22,6 +23,7 @@ void main() {
 
         if (in.hasNextDouble()) {
             height = in.nextDouble();
+            in.nextLine();
             done = true;
         } else {
             String trash = in.nextLine();

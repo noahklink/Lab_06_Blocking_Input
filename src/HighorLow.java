@@ -10,6 +10,7 @@ void main() {
 
         if (in.hasNextInt()) {
             guess = in.nextInt();
+            in.nextLine();
 
             if (guess > 10 || guess < 1) {
                 IO.println("Guess must be between 1-10, not " + guess);
